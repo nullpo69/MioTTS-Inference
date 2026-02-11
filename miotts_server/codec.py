@@ -77,6 +77,7 @@ class MioCodecService:
 
         # Extract global embedding from reference waveform if provided
         if reference_waveform is not None:
+            reference_waveform = reference_waveform.to(_codec_device(self.codec))
             ref_features = self.codec.encode(reference_waveform, return_content=False, return_global=True)
             global_embedding = ref_features.global_embedding
 
@@ -106,6 +107,7 @@ class MioCodecService:
 
         # Extract global embedding from reference waveform if provided
         if reference_waveform is not None:
+            reference_waveform = reference_waveform.to(device)
             ref_features = self.codec.encode(reference_waveform, return_content=False, return_global=True)
             global_embedding = ref_features.global_embedding
         token_tensors = []
