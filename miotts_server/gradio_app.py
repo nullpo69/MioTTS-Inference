@@ -82,9 +82,12 @@ def _call_tts(
             "n": best_of_n_n,
             "language": best_of_n_language,
         }
-    response = httpx.post(f"{api_base}/v1/tts", json=payload, timeout=120.0)
-
-    response.raise_for_status()
+    try:
+        response = httpx.post(f"{api_base}/v1/tts", json=payload, timeout=120.0)
+        response.raise_for_status()
+    except httpx.HTTPStatusError as exc:
+        print(f"Error response: {exc.response.text}")
+        raise gr.Error(f"Error: {exc.response.text}") from exc
     content_type = response.headers.get("content-type", "")
     if content_type.startswith("audio/"):
         return _decode_wav_bytes(response.content), ""
