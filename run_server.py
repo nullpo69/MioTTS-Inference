@@ -63,7 +63,7 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--codec-model", default=_env("MIOTTS_CODEC_MODEL", "Aratako/MioCodec-25Hz-24kHz")
+        "--codec-model", default=_env("MIOTTS_CODEC_MODEL", "Aratako/MioCodec-25Hz-44.1kHz-v2")
     )
     parser.add_argument("--device", default=_env("MIOTTS_DEVICE"))
 

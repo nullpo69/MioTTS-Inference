@@ -140,7 +140,7 @@ python run_gradio.py
 
 | 引数 | 環境変数 | デフォルト | 説明 |
 |------|---------|-----------|------|
-| `--codec-model` | `MIOTTS_CODEC_MODEL` | `Aratako/MioCodec-25Hz-24kHz` | MioCodecのモデル名 |
+| `--codec-model` | `MIOTTS_CODEC_MODEL` | `Aratako/MioCodec-25Hz-44.1kHz-v2` | MioCodecのモデル名 |
 | `--device` | `MIOTTS_DEVICE` | `cuda`（なければ`cpu`） | コーデックの推論デバイス |
 
 #### プリセット設定
@@ -201,7 +201,7 @@ python scripts/generate_preset.py --audio /path/to/audio.wav --preset-id preset_
 | `--audio` | はい | - | 参照音声ファイルのパス |
 | `--preset-id` | はい | - | プリセットID（ファイル名になります） |
 | `--output-dir` | いいえ | `presets` | 出力ディレクトリ |
-| `--model-id` | いいえ | `Aratako/MioCodec-25Hz-24kHz` | MioCodecのモデル名 |
+| `--model-id` | いいえ | `Aratako/MioCodec-25Hz-44.1kHz-v2` | MioCodecのモデル名 |
 | `--device` | いいえ | `cuda` | 推論デバイス |
 
 ### デフォルトプリセット

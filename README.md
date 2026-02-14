@@ -142,7 +142,7 @@ Settings can be changed via environment variables or CLI arguments. CLI argument
 
 | Argument | Environment Variable | Default | Description |
 |----------|---------------------|---------|-------------|
-| `--codec-model` | `MIOTTS_CODEC_MODEL` | `Aratako/MioCodec-25Hz-24kHz` | MioCodec model name |
+| `--codec-model` | `MIOTTS_CODEC_MODEL` | `Aratako/MioCodec-25Hz-44.1kHz-v2` | MioCodec model name |
 | `--device` | `MIOTTS_DEVICE` | `cuda` (or `cpu` if unavailable) | Codec inference device |
 
 #### Preset Settings
@@ -203,7 +203,7 @@ python scripts/generate_preset.py --audio /path/to/audio.wav --preset-id preset_
 | `--audio` | Yes | - | Path to reference audio file |
 | `--preset-id` | Yes | - | Preset ID (becomes the filename) |
 | `--output-dir` | No | `presets` | Output directory |
-| `--model-id` | No | `Aratako/MioCodec-25Hz-24kHz` | MioCodec model name |
+| `--model-id` | No | `Aratako/MioCodec-25Hz-44.1kHz-v2` | MioCodec model name |
 | `--device` | No | `cuda` | Inference device |
 
 ### Default Presets
