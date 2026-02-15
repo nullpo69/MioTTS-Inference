@@ -98,7 +98,7 @@ def get_config() -> ServerConfig:
             llm_api_key=os.getenv("MIOTTS_LLM_API_KEY"),
             llm_model=os.getenv("MIOTTS_LLM_MODEL"),
             llm_timeout=_env_float("MIOTTS_LLM_TIMEOUT", 120.0),
-            codec_model_id=os.getenv("MIOTTS_CODEC_MODEL", "Aratako/MioCodec-25Hz-24kHz"),
+            codec_model_id=os.getenv("MIOTTS_CODEC_MODEL", "Aratako/MioCodec-25Hz-44.1kHz-v2"),
             device=device,
             max_text_length=_env_int("MIOTTS_MAX_TEXT_LENGTH", 300),
             presets_dir=presets_dir,
